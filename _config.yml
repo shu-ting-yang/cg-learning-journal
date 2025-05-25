@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Computer Graphics/ Technical Art Notes"
+title                    : "Computer Graphics Learning Journal"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Shuting Yang"
@@ -115,16 +115,16 @@ analytics:
 author:
   name             : "Shuting Yang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A romantic dilettante."
+  bio              : "I enjoy hiking."
   location         : "Cambridge, UK"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
+      url: "ystfc72@gmail.com"
+    - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://www.linkedin.com/in/yang-shuting/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
