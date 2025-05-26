@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/shutingyang/Documents/blog/my-cg-journal/build",
+  "command": "/usr/bin/clang  -I/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/include -I/opt/homebrew/include -g -arch arm64 -o CMakeFiles/glad.dir/src/glad.c.o -c /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c",
+  "file": "/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c",
+  "output": "CMakeFiles/glad.dir/src/glad.c.o"
+},
+{
+  "directory": "/Users/shutingyang/Documents/blog/my-cg-journal/build",
+  "command": "/usr/bin/clang++  -I/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/triangle_glfw.dir/src/main.cpp.o -c /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/main.cpp",
+  "file": "/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/main.cpp",
+  "output": "CMakeFiles/triangle_glfw.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/shutingyang/Documents/blog/my-cg-journal/build",
+  "command": "/usr/bin/clang  -I/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/triangle_glfw.dir/src/glad.c.o -c /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c",
+  "file": "/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c",
+  "output": "CMakeFiles/triangle_glfw.dir/src/glad.c.o"
+}
+]
