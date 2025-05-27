@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shutingyang/Documents/triangle_glfw
+CMAKE_SOURCE_DIR = /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shutingyang/Documents/triangle_glfw/build
+CMAKE_BINARY_DIR = /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/triangle_glfw.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/triangle_glfw.dir/codegen:
 .PHONY : CMakeFiles/triangle_glfw.dir/codegen
 
 CMakeFiles/triangle_glfw.dir/src/main.cpp.o: CMakeFiles/triangle_glfw.dir/flags.make
-CMakeFiles/triangle_glfw.dir/src/main.cpp.o: /Users/shutingyang/Documents/triangle_glfw/src/main.cpp
+CMakeFiles/triangle_glfw.dir/src/main.cpp.o: /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/main.cpp
 CMakeFiles/triangle_glfw.dir/src/main.cpp.o: CMakeFiles/triangle_glfw.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/triangle_glfw.dir/src/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/triangle_glfw.dir/src/main.cpp.o -MF CMakeFiles/triangle_glfw.dir/src/main.cpp.o.d -o CMakeFiles/triangle_glfw.dir/src/main.cpp.o -c /Users/shutingyang/Documents/triangle_glfw/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/triangle_glfw.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/triangle_glfw.dir/src/main.cpp.o -MF CMakeFiles/triangle_glfw.dir/src/main.cpp.o.d -o CMakeFiles/triangle_glfw.dir/src/main.cpp.o -c /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/main.cpp
 
 CMakeFiles/triangle_glfw.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/triangle_glfw.dir/src/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shutingyang/Documents/triangle_glfw/src/main.cpp > CMakeFiles/triangle_glfw.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/main.cpp > CMakeFiles/triangle_glfw.dir/src/main.cpp.i
 
 CMakeFiles/triangle_glfw.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/triangle_glfw.dir/src/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shutingyang/Documents/triangle_glfw/src/main.cpp -o CMakeFiles/triangle_glfw.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/main.cpp -o CMakeFiles/triangle_glfw.dir/src/main.cpp.s
 
 CMakeFiles/triangle_glfw.dir/src/glad.c.o: CMakeFiles/triangle_glfw.dir/flags.make
-CMakeFiles/triangle_glfw.dir/src/glad.c.o: /Users/shutingyang/Documents/triangle_glfw/src/glad.c
+CMakeFiles/triangle_glfw.dir/src/glad.c.o: /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c
 CMakeFiles/triangle_glfw.dir/src/glad.c.o: CMakeFiles/triangle_glfw.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/triangle_glfw.dir/src/glad.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/triangle_glfw.dir/src/glad.c.o -MF CMakeFiles/triangle_glfw.dir/src/glad.c.o.d -o CMakeFiles/triangle_glfw.dir/src/glad.c.o -c /Users/shutingyang/Documents/triangle_glfw/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/triangle_glfw.dir/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/triangle_glfw.dir/src/glad.c.o -MF CMakeFiles/triangle_glfw.dir/src/glad.c.o.d -o CMakeFiles/triangle_glfw.dir/src/glad.c.o -c /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c
 
 CMakeFiles/triangle_glfw.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/triangle_glfw.dir/src/glad.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/shutingyang/Documents/triangle_glfw/src/glad.c > CMakeFiles/triangle_glfw.dir/src/glad.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c > CMakeFiles/triangle_glfw.dir/src/glad.c.i
 
 CMakeFiles/triangle_glfw.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/triangle_glfw.dir/src/glad.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/shutingyang/Documents/triangle_glfw/src/glad.c -o CMakeFiles/triangle_glfw.dir/src/glad.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c -o CMakeFiles/triangle_glfw.dir/src/glad.c.s
 
 # Object files for target triangle_glfw
 triangle_glfw_OBJECTS = \
@@ -114,7 +114,7 @@ triangle_glfw: CMakeFiles/triangle_glfw.dir/build.make
 triangle_glfw: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 triangle_glfw: /opt/homebrew/lib/libglfw.3.4.dylib
 triangle_glfw: CMakeFiles/triangle_glfw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable triangle_glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable triangle_glfw"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/triangle_glfw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +126,6 @@ CMakeFiles/triangle_glfw.dir/clean:
 .PHONY : CMakeFiles/triangle_glfw.dir/clean
 
 CMakeFiles/triangle_glfw.dir/depend:
-	cd /Users/shutingyang/Documents/triangle_glfw/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shutingyang/Documents/triangle_glfw /Users/shutingyang/Documents/triangle_glfw /Users/shutingyang/Documents/triangle_glfw/build /Users/shutingyang/Documents/triangle_glfw/build /Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles/triangle_glfw.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles/triangle_glfw.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/triangle_glfw.dir/depend
 

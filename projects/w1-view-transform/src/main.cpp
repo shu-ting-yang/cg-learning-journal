@@ -48,8 +48,8 @@ std::string loadShaderSource(const std::string& filepath) {
     return buffer.str();
 }
 
-std::string vertexCode = loadShaderSource("shaders/vertex.glsl");
-std::string fragmentCode = loadShaderSource("shaders/fragment.glsl");
+std::string vertexCode = loadShaderSource("../shaders/vertex.glsl");
+std::string fragmentCode = loadShaderSource("../shaders/fragment.glsl");
 
 const char* vertex_shader_source = vertexCode.c_str();
 const char* fragment_shader_source = fragmentCode.c_str();

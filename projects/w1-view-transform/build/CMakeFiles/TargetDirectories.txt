@@ -1,4 +1,4 @@
-/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles/glad.dir
-/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles/triangle_glfw.dir
-/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles/edit_cache.dir
-/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles/rebuild_cache.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles/glad.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles/triangle_glfw.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles/edit_cache.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles/rebuild_cache.dir

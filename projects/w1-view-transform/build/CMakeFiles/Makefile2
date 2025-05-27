@@ -54,10 +54,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shutingyang/Documents/triangle_glfw
+CMAKE_SOURCE_DIR = /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shutingyang/Documents/triangle_glfw/build
+CMAKE_BINARY_DIR = /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -88,14 +88,14 @@ clean: CMakeFiles/triangle_glfw.dir/clean
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=1,2 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=1,2 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/glad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles 0
 .PHONY : CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -105,7 +105,7 @@ glad: CMakeFiles/glad.dir/rule
 # codegen rule for target.
 CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=1,2 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=1,2 "Finished codegen for target glad"
 .PHONY : CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -120,14 +120,14 @@ CMakeFiles/glad.dir/clean:
 CMakeFiles/triangle_glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangle_glfw.dir/build.make CMakeFiles/triangle_glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangle_glfw.dir/build.make CMakeFiles/triangle_glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=3,4,5 "Built target triangle_glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=3,4,5 "Built target triangle_glfw"
 .PHONY : CMakeFiles/triangle_glfw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/triangle_glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/triangle_glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles 0
 .PHONY : CMakeFiles/triangle_glfw.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ triangle_glfw: CMakeFiles/triangle_glfw.dir/rule
 # codegen rule for target.
 CMakeFiles/triangle_glfw.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangle_glfw.dir/build.make CMakeFiles/triangle_glfw.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/triangle_glfw/build/CMakeFiles --progress-num=3,4,5 "Finished codegen for target triangle_glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/CMakeFiles --progress-num=3,4,5 "Finished codegen for target triangle_glfw"
 .PHONY : CMakeFiles/triangle_glfw.dir/codegen
 
 # clean rule for target.

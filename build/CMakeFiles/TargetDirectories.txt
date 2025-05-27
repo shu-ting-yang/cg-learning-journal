@@ -1,4 +1,0 @@
-/Users/shutingyang/Documents/blog/my-cg-journal/build/CMakeFiles/glad.dir
-/Users/shutingyang/Documents/blog/my-cg-journal/build/CMakeFiles/triangle_glfw.dir
-/Users/shutingyang/Documents/blog/my-cg-journal/build/CMakeFiles/edit_cache.dir
-/Users/shutingyang/Documents/blog/my-cg-journal/build/CMakeFiles/rebuild_cache.dir

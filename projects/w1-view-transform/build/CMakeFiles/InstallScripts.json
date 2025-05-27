@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/shutingyang/Documents/triangle_glfw/build/cmake_install.cmake"
+		"/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

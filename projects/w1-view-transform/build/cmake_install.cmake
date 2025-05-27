@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shutingyang/Documents/triangle_glfw
+# Install script for directory: /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/shutingyang/Documents/triangle_glfw/build/install_local_manifest.txt"
+  file(WRITE "/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/shutingyang/Documents/triangle_glfw/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

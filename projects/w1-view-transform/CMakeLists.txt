@@ -14,6 +14,9 @@ link_directories(/opt/homebrew/lib)
 #include glm
 include_directories(/opt/homebrew/include)
 
+#include shader
+include_directories(${CMAKE_SOURCE_DIR}/shaders)
+
 
 add_executable(triangle_glfw 
 src/main.cpp

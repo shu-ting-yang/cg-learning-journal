@@ -1,5 +1,5 @@
 CMakeFiles/triangle_glfw.dir/src/glad.c.o: \
-  /Users/shutingyang/Documents/triangle_glfw/src/glad.c \
+  /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/src/glad.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h \
@@ -92,7 +92,7 @@ CMakeFiles/triangle_glfw.dir/src/glad.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
-  /Users/shutingyang/Documents/triangle_glfw/include/glad/glad.h \
-  /Users/shutingyang/Documents/triangle_glfw/include/KHR/khrplatform.h \
+  /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/include/glad/glad.h \
+  /Users/shutingyang/Documents/blog/my-cg-journal/projects/w1-view-transform/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dlfcn.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdbool.h
