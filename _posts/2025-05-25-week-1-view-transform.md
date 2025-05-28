@@ -1,10 +1,9 @@
----
+# Week 1: Understanding View Transformations
 
-title: "Week 1: Understanding View Transformations"
-date: 2025-05-25
-categories: \[graphics, opengl]
-tags: \[OpenGL, matrix, camera, glm]
-------------------------------------
+
+* date: 2026-05-25
+* categories: \[graphics, opengl]
+* tags: \[OpenGL, matrix, camera, glm]
 
 This week, I started my first CG engineering project: rendering a triangle using OpenGL, and learning how different transformation matrices affect the final image.
 
