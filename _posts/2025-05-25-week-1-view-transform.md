@@ -1,7 +1,7 @@
 # Week 1: Understanding View Transformations
 
 
-* date: 2026-05-25
+* date: 2025-05-25
 * categories: \[graphics, opengl]
 * tags: \[OpenGL, matrix, camera, glm]
 
