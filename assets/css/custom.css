@@ -1,0 +1,20 @@
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Merriweather', serif;
+}
+
+code, pre {
+  font-family: 'Inconsolata', monospace;
+}
+
+/* Optional enhancements */
+body {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
