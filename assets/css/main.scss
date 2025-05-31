@@ -7,3 +7,11 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+/* Now override font settings */
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Merriweather', serif;
+}
+
+code, pre {
+  font-family: 'Inconsolata', monospace;
+}
