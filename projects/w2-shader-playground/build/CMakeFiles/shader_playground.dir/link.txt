@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/shader_playground.dir/src/main.cpp.o CMakeFiles/shader_playground.dir/src/glad.c.o -o shader_playground   -L/opt/homebrew/lib  -Wl,-rpath,/opt/homebrew/lib -framework OpenGL /opt/homebrew/lib/libglfw.3.4.dylib
