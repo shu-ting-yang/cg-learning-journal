@@ -1,17 +1,55 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
+# Only the main Sass file needs front matter
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-/* Now override font settings */
-body, h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Merriweather', serif;
+// Import Minimal Mistakes theme and your selected skin
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+// ===== Global Base Font Settings =====
+html {
+  font-size: 15px; // You can change this to 14px or 16px
 }
 
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+.page__title,
+.archive__item-title,
+.site-title,
+.masthead__title,
+.nav__items,
+.page__footer,
+.toc__menu,
+.author__name {
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+}
+
+// ===== Inline Code Styling =====
+.page__content :not(pre) > code {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1em !important; // Match surrounding text
+  padding: 0.1rem 0.3rem;
+  background-color: #fafafa;
+  border-radius: 3px;
+}
+
+// ===== Block Code Styling =====
+.page__content pre,
+.page__content pre code {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem; // 1rem = 15px (as set in html above)
+  line-height: 2.0;
+  background-color: #444444;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+// ===== Universal Code Fallback =====
 code, pre {
   font-family: 'Inconsolata', monospace;
 }
