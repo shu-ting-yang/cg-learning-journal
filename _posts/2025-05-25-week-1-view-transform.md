@@ -21,6 +21,9 @@ I created a simple OpenGL app that renders a triangle, and wired up camera contr
 * Mouse to look around
 * Real-time view matrix updates
 
+[Code](https://github.com/shu-ting-yang/cg-learning-journal/tree/master/projects/w1-view-transform)
+
+
 ## Recording
 
 <video controls autoplay muted loop style="max-width: 100%;">
