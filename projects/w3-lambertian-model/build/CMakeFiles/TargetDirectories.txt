@@ -1,0 +1,4 @@
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w3-lambertian-model/build/CMakeFiles/glad.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w3-lambertian-model/build/CMakeFiles/lambertian_model.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w3-lambertian-model/build/CMakeFiles/edit_cache.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w3-lambertian-model/build/CMakeFiles/rebuild_cache.dir
