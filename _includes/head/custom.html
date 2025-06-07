@@ -2,4 +2,26 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+{% if page.math %}
+  <!-- Tell MathJax to use $ for Latex style delimiters-->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        renderActions: {
+          addMenu: []
+        }
+      }
+    };
+  </script>
+  <!-- Load MathJax -->
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+{% endif %}
+
+
 <!-- end custom head snippets -->
