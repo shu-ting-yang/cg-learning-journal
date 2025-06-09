@@ -1,11 +1,10 @@
 ---
 layout: single
-title: "2025 06 08 Week 3 Lambertian Model and Lighting"
+title: "Week 3 Lambertian Model and Lighting"
 permalink: /week-3-Lambertian-model/
 math: true
 ---
-# Title
-
+# [WIP]
 * date: 2025-06-08
 * categories: \[graphics, opengl]
 * tags: \[graphics, shaders, opengl, glsl, lambertian, lighting]
