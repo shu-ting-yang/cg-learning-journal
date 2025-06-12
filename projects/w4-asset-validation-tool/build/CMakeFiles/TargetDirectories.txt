@@ -1,0 +1,5 @@
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w4-asset-validation-tool/build/CMakeFiles/glad.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w4-asset-validation-tool/build/CMakeFiles/imgui.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w4-asset-validation-tool/build/CMakeFiles/AssetPipeline.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w4-asset-validation-tool/build/CMakeFiles/edit_cache.dir
+/Users/shutingyang/Documents/blog/my-cg-journal/projects/w4-asset-validation-tool/build/CMakeFiles/rebuild_cache.dir
