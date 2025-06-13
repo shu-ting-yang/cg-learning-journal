@@ -1,0 +1,30 @@
+// Default (light)
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --link: #2a7ae2;
+  --border: #ddd;
+}
+
+// Dark theme overrides
+[data-theme="dark"] {
+  --bg: #121212;
+  --fg: #eeeeee;
+  --link: #88c0d0;
+  --border: #444;
+}
+
+// Apply to body and common elements
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  border: 5px solid red !important;
+}
+
+a {
+  color: var(--link);
+}
+
+hr, .page__footer, .archive__item {
+  border-color: var(--border);
+}
