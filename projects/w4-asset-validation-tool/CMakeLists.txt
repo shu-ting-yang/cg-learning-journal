@@ -38,6 +38,7 @@ src/Validator.cpp
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
+find_package(assimp REQUIRED)
 
 # Link libraries
 target_link_libraries(AssetPipeline PRIVATE 
