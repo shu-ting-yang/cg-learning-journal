@@ -507,6 +507,32 @@ table {
       opacity: 1;
     }
   }
+  // Drop down menu for author URLs
+  .author__urls {
+    background-color: var(--background-color) !important;
+    border: 1px solid var(--border-color) !important;
+
+    &::after,
+    &::before {
+      border-color: var(--background-color) transparent !important;
+    }
+
+    li {
+      color: var(--text-color) !important;
+    }
+
+    a {
+      color: var(--link-color) !important;
+
+      &:hover {
+        color: var(--link-hover-color) !important;
+      }
+    }
+
+    i {
+      color: var(--text-color) !important;
+    }
+  }
 }
 
 // === Theme toggle button (optional polish) ===
@@ -525,4 +551,21 @@ table {
 
 [data-theme="dark"] #theme-toggle:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .author__urls li {
+  // shared layout
+  display: flex;
+  align-items: center;
+  gap: 0.80rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.65rem;
+
+  i {
+    flex-shrink: 0;
+    width: 1.25rem;
+    font-size: 1.00rem;
+    text-align: center;
+    color: var(--text-color);
+  }
 }
