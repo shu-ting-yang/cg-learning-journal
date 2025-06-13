@@ -1,0 +1,52 @@
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes"; // Main theme styles
+
+// Theme toggle button styles
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+// Base light theme color variables (already handled by _default.scss)
+
+[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --text-color: #cccccc;
+  --link-color: #64b5f6;
+  --link-hover-color: #90caf9;
+  --masthead-background: #1a1a1a;
+  --footer-background: #1a1a1a;
+  --sidebar-background: #2c2c2c;
+  --inline-code-color: #f92672;
+  --inline-code-bg: #2e2e2e;
+}
+
+// Then apply variables to actual styles
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
+.page__footer {
+  background-color: var(--footer-background);
+}
+
+.sidebar {
+  background-color: var(--sidebar-background);
+}
+
