@@ -330,3 +330,13 @@ defaults:
 # Custom head includes (to add your JS)
 head_scripts:
   - /assets/js/theme-toggle.js
+
+# Syntax highlighting
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+      start_line: 1
