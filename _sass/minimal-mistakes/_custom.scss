@@ -1,30 +1,424 @@
-// Default (light)
+/* Theme Variables */
 :root {
-  --bg: #ffffff;
-  --fg: #111111;
-  --link: #2a7ae2;
-  --border: #ddd;
+  /* Light mode (default) */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #1976d2;
+  --link-hover-color: #115293;
+  --border-color: #e3e3e3;
+  --code-background: #f8f8f8;
+  --masthead-background: #ffffff;
+  --sidebar-background: #f8f9fa;
+  --footer-background: #f8f9fa;
 }
 
-// Dark theme overrides
 [data-theme="dark"] {
-  --bg: #121212;
-  --fg: #eeeeee;
-  --link: #88c0d0;
-  --border: #444;
+  /* Dark mode overrides */
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --link-color: #64b5f6;
+  --link-hover-color: #90caf9;
+  --border-color: #404040;
+  --code-background: #2d2d2d;
+  --masthead-background: #222222;
+  --sidebar-background: #252525;
+  --footer-background: #252525;
 }
 
-// Apply to body and common elements
+/* Global Background and Text */
 body {
-  background-color: var(--bg);
-  color: var(--fg);
-  border: 5px solid red !important;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Main content areas */
+.page,
+.archive,
+.layout--single .page__inner-wrap,
+.layout--archive .archive__wrap {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Links */
 a {
-  color: var(--link);
+  color: var(--link-color) !important;
+  
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color) !important;
+  }
 }
 
-hr, .page__footer, .archive__item {
-  border-color: var(--border);
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title {
+  color: var(--text-color) !important;
+}
+
+/* Masthead (top navigation) */
+.masthead {
+  background-color: var(--masthead-background) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  
+  .site-title,
+  .greedy-nav a {
+    color: var(--text-color) !important;
+    
+    &:hover {
+      color: var(--link-color) !important;
+    }
+  }
+}
+
+.greedy-nav {
+  background: var(--masthead-background) !important;
+  
+  .visible-links a {
+    color: var(--text-color) !important;
+    
+    &:hover {
+      color: var(--link-color) !important;
+    }
+  }
+  
+  .hidden-links {
+    background: var(--masthead-background) !important;
+    border: 1px solid var(--border-color) !important;
+    
+    a {
+      color: var(--text-color) !important;
+      
+      &:hover {
+        background: var(--sidebar-background) !important;
+        color: var(--link-color) !important;
+      }
+    }
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--sidebar-background) !important;
+  border-right: 1px solid var(--border-color) !important;
+  
+  .author__avatar img {
+    border: 2px solid var(--border-color) !important;
+  }
+  
+  .author__name {
+    color: var(--text-color) !important;
+  }
+  
+  .author__bio {
+    color: var(--text-color) !important;
+  }
+  
+  .author__urls {
+    a {
+      color: var(--link-color) !important;
+      
+      &:hover {
+        color: var(--link-hover-color) !important;
+      }
+    }
+  }
+}
+
+/* Footer */
+.page__footer {
+  background-color: var(--footer-background) !important;
+  border-top: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+  
+  a {
+    color: var(--link-color) !important;
+    
+    &:hover {
+      color: var(--link-hover-color) !important;
+    }
+  }
+}
+
+.page__footer-copyright {
+  color: var(--text-color) !important;
+}
+
+/* Code blocks and syntax highlighting */
+:root {
+  /* Light mode syntax colors */
+  --code-keyword: #d73a49;        /* Keywords (void, const, etc.) */
+  --code-string: #032f62;         /* Strings */
+  --code-comment: #6a737d;        /* Comments */
+  --code-number: #005cc5;         /* Numbers */
+  --code-function: #6f42c1;       /* Function names */
+  --code-type: #d73a49;           /* Types (int, float, etc.) */
+  --code-variable: #e36209;       /* Variables */
+  --code-operator: #d73a49;       /* Operators */
+  --code-punctuation: #24292e;    /* Brackets, semicolons */
+}
+
+[data-theme="dark"] {
+  /* Dark mode syntax colors */
+  --code-keyword: #ff7b72;        /* Keywords */
+  --code-string: #a5d6ff;         /* Strings */
+  --code-comment: #8b949e;        /* Comments */
+  --code-number: #79c0ff;         /* Numbers */
+  --code-function: #d2a8ff;       /* Function names */
+  --code-type: #ff7b72;           /* Types */
+  --code-variable: #ffa657;       /* Variables */
+  --code-operator: #ff7b72;       /* Operators */
+  --code-punctuation: #e6edf3;    /* Brackets, semicolons */
+}
+
+/* Inline code */
+code {
+  background-color: var(--code-background) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--code-background) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  padding: 1em;
+  overflow-x: auto;
+  
+  code {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0;
+    color: var(--text-color) !important;
+  }
+}
+
+.highlight {
+  background-color: var(--code-background) !important;
+  border-radius: 4px;
+  
+  pre {
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0;
+  }
+}
+
+/* Syntax highlighting classes */
+.highlight {
+  /* Keywords (class, public, private, void, int, etc.) */
+  .k, .kc, .kd, .kn, .kp, .kr, .kt, .kv {
+    color: var(--code-keyword) !important;
+    font-weight: bold;
+  }
+  
+  /* Strings */
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+    color: var(--code-string) !important;
+  }
+  
+  /* Comments */
+  .c, .cm, .cp, .c1, .cs {
+    color: var(--code-comment) !important;
+    font-style: italic;
+  }
+  
+  /* Numbers */
+  .m, .mf, .mh, .mi, .mo, .il {
+    color: var(--code-number) !important;
+  }
+  
+  /* Function names */
+  .n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nt, .nv, .nx, .py {
+    color: var(--text-color) !important;
+  }
+  
+  /* Function definitions */
+  .nf {
+    color: var(--code-function) !important;
+    font-weight: bold;
+  }
+  
+  /* Types and classes */
+  .nc, .nt {
+    color: var(--code-type) !important;
+    font-weight: bold;
+  }
+  
+  /* Variables */
+  .nv, .vi, .vg {
+    color: var(--code-variable) !important;
+  }
+  
+  /* Operators */
+  .o, .ow {
+    color: var(--code-operator) !important;
+  }
+  
+  /* Punctuation (brackets, semicolons, etc.) */
+  .p {
+    color: var(--code-punctuation) !important;
+  }
+  
+  /* Preprocessor directives (#include, #define) */
+  .cp {
+    color: var(--code-keyword) !important;
+    font-weight: bold;
+  }
+  
+  /* Line numbers (if enabled) */
+  .lineno {
+    color: var(--code-comment) !important;
+    background-color: transparent !important;
+    border-right: 1px solid var(--border-color) !important;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  /* Error highlighting */
+  .err {
+    color: #ff6b6b !important;
+    background-color: transparent !important;
+  }
+  
+  /* Generic tokens */
+  .g, .gd, .ge, .gr, .gh, .gi, .go, .gp, .gs, .gu, .gt {
+    color: var(--text-color) !important;
+  }
+  
+  /* Whitespace */
+  .w {
+    color: transparent !important;
+  }
+}
+
+/* Rouge specific classes for C++ */
+.language-cpp, .language-c, .language-cxx {
+  .highlight {
+    .kt { /* Built-in types like int, float, char, etc. */
+      color: var(--code-type) !important;
+      font-weight: bold;
+    }
+    
+    .n { /* General names/identifiers */
+      color: var(--text-color) !important;
+    }
+    
+    .nf { /* Function calls and definitions */
+      color: var(--code-function) !important;
+    }
+    
+    .nn { /* Namespaces like std:: */
+      color: var(--code-type) !important;
+    }
+    
+    .p { /* Punctuation */
+      color: var(--code-punctuation) !important;
+    }
+  }
+}
+
+/* Fallback for any remaining syntax elements */
+.highlight * {
+  background-color: transparent !important;
+}
+
+/* Code block container */
+.code-container,
+figure.highlight {
+  background-color: var(--code-background) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+/* Tables */
+table {
+  background-color: var(--background-color) !important;
+  
+  th {
+    background-color: var(--sidebar-background) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+  }
+  
+  td {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+  }
+}
+
+/* Archive items */
+.archive__item {
+  background-color: var(--background-color) !important;
+  
+  .archive__item-title a {
+    color: var(--text-color) !important;
+    
+    &:hover {
+      color: var(--link-color) !important;
+    }
+  }
+}
+
+.list__item {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Page meta information */
+.page__meta {
+  color: var(--text-color) !important;
+  opacity: 0.7;
+  
+  a {
+    color: var(--link-color) !important;
+  }
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--link-color) !important;
+  color: var(--background-color) !important;
+  border-color: var(--link-color) !important;
+  
+  &:hover {
+    background-color: var(--link-hover-color) !important;
+    border-color: var(--link-hover-color) !important;
+  }
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  
+  &:hover {
+    background-color: var(--sidebar-background);
+    transform: scale(1.1);
+  }
+}
+
+/* Ensure theme toggle appears in masthead */
+.masthead {
+  position: relative;
 }
