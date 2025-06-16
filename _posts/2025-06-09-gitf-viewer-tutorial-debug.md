@@ -1,7 +1,6 @@
 ## Debugging glTF Viewer on macOS (OpenGL 4.1, Apple Silicon)
 
 **Date:** 2025-06-09
-**Author:** Shuting
 
 This post documents my experience bringing up the [`gltf-viewer`](https://gitlab.com/gltf-viewer-tutorial/gltf-viewer) tutorial on macOS (OpenGL 4.1, Apple M1). It’s a combination of concise bring-up log and detailed debug steps. This may serve as a reference for future setups or other developers working on macOS + GLFW + OpenGL.
 
