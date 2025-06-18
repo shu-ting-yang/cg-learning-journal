@@ -2,10 +2,10 @@
 main:
   - title: "Home"
     url: https://shu-ting-yang.github.io/cg-learning-journal/
-  - title: "Github"
-    url: https://github.com/shu-ting-yang/cg-learning-journal
   - title: "Learning Journal"
     url: /learning-log/
+  #- title: "Github"
+  #  url: https://github.com/shu-ting-yang/cg-learning-journal
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
