@@ -8,80 +8,76 @@ math: true
 * categories: [graphics, opengl]
 * tags: [graphics, shaders, opengl, glsl, normal, linear-algebra, lighting]
 
-## Goal
 
-To understand why normals in vertex shaders are transformed using the inverse transpose of the model matrix when applying lighting models like Lambertian reflectance.
+# Transforming Normals with the Inverse Transpose
 
-## What Was Implemented
+When implementing [Lambertian shading]({{ site.baseurl }}/week-3-Lambertian-model/) in vertex shaders, a common but often overlooked detail emerges: **normals are not transformed using the model matrix directly**, but instead through the inverse transpose of that matrix.
+
+This operation is frequently seen in the form:
 
 ```glsl
 Normal = mat3(transpose(inverse(model))) * aNormal;
-````
-
-This common line in GLSL shaders transforms the vertex normal using the inverse transpose of the model matrix. While initially counterintuitive, the reasoning lies in preserving surface orientation under general linear transformations.
-
----
-
-## Shader Logic
-
-### Why Not Just Use the Model Matrix?
-
-Transforming vertex positions with a model matrix $M$ is straightforward:
-
-```glsl
-vec4 worldPos = model * vec4(aPos, 1.0);
 ```
 
-However, transforming normals is not as simple. If the model matrix contains **non-uniform scaling or shearing**, applying `model * aNormal` may distort the normal direction, breaking the expected **perpendicular relationship** between the normal and the surface.
+To justify this transformation, it is necessary to examine the relevant principles of linear algebra, particularly how dot products interact with linear mappings.
 
-### Linear Algebra Identity
 
-A key identity from linear algebra explains the fix:
+## Dot Product and the Role of Matrix Transpose
+
+A key identity from linear algebra underpins the correct handling of normals under affine transformation:
 
 $$
 a \cdot (M b) = (M^T a) \cdot b
 $$
 
-This states that if a vector **b** is transformed by a matrix **M**, then to preserve the dot product, the other vector **a** must be transformed by the **transpose of M**.
+This identity holds for any vectors $a$, $b$ and any matrix $M$, and follows directly from two well-established rules:
 
-Applying this to normals:
+1. The dot product can be represented as a matrix product:
 
-To preserve the dot product between the normal and the surface tangent after transformation:
+   $$
+   a \cdot b = a^T b
+   $$
+
+2. The transpose of a matrix product reverses the order:
+
+   $$
+   (AB)^T = B^T A^T
+   $$
+
+Applying these yields the following derivation:
 
 $$
-n' \cdot (Mv) = n \cdot v
+a \cdot (M b) = a^T (M b) = (a^T M) b = (M^T a)^T b = (M^T a) \cdot b
 $$
 
-Using the identity above:
+This equivalence provides the mathematical basis for transferring transformations from one vector to the other within a dot product expression.
+
+
+## Application to Normal Transformation
+
+Let $v$ denote a surface tangent vector and $n$ a normal vector such that $n \cdot v = 0$, representing perpendicularity in the local coordinate frame. When applying a transformation matrix $M$, the tangent vector is transformed to $M v$. In order to preserve the geometric constraint (i.e., that the transformed normal $n'$ remains perpendicular to $M v$), the following condition must hold:
+
+$$
+n' \cdot (M v) = n \cdot v
+$$
+
+By the identity established above:
 
 $$
 (M^T n') \cdot v = n \cdot v
-\quad \Rightarrow \quad M^T n' = n
-\quad \Rightarrow \quad n' = (M^{-1})^T n
 $$
 
-Thus, the correct transformation for normals under general affine transformations is:
-
-```glsl
-Normal = mat3(transpose(inverse(model))) * aNormal;
-```
-
----
-
-## Key Learnings
-
-### When Is the Inverse Transpose Necessary?
-
-The inverse transpose is required when the model matrix contains **non-uniform scale**, **skew**, or **any non-orthogonal transformation**. These break the assumption that normals can simply follow vertex positions.
-
-If the matrix is purely orthonormal (e.g., only rotation and translation), then:
+For this equation to be valid for all $v$, it must follow that:
 
 $$
-(M^{-1})^T = M
+M^T n' = n \quad \Rightarrow \quad n' = (M^{-1})^T n
 $$
 
-In such cases, normals can be transformed directly using the model matrix without loss of correctness.
+This conclusion explains why normals must be transformed using the inverse transpose of the model matrix rather than the model matrix itself.
 
-### Visual Consequences
 
-Incorrect normal transformation results in lighting artifacts: surfaces may appear too dark, too bright, or inconsistent depending on view angle and light position. These effects are especially visible when using directional lights or dynamic shading models.
+## Significance of the Inverse Transpose
+
+This transformation becomes essential when the model matrix includes **non-uniform scaling**, **shear**, or other non-orthogonal components. Under such transformations, directly applying the model matrix to normals would distort their orientation and violate their perpendicularity with respect to transformed tangents, leading to incorrect lighting and shading.
+
+In contrast, if the model matrix consists solely of orthonormal transformations (e.g., pure rotation and translation), then $(M^{-1})^T = M$, and the inverse transpose simplifies to the original matrix. However, relying on this simplification is only valid under those specific constraints.
