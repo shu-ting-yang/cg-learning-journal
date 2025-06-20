@@ -1,0 +1,12 @@
+{
+  "name": "asset-validator",
+  "version": "1.0.0",
+  "description": "3D Asset Validation Tool for GLTF files",
+  "dependencies": [
+    "assimp",
+    "glm",
+    "fmt",
+    "nlohmann-json"
+  ],
+  "builtin-baseline": "3426db05b996481ca31e95fff3734cf23e0f51bc"
+}
