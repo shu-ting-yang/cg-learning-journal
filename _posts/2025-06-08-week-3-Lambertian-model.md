@@ -46,12 +46,10 @@ Use ESC to leave the program.
 
 
 ### Screenshots
-![Lambertian-1 Output](../../assets/images/blogpost/weekly/w3/lambertian_1.png)
-![Lambertian-2 Output](../../assets/images/blogpost/weekly/w3/lambertian_2.png)
-
+![Lambertian-1 Output]({{ '/assets/images/blogpost/weekly/w3/lambertian_1.png' | relative_url }})
+![Lambertian-2 Output]({{ '/assets/images/blogpost/weekly/w3/lambertian_2.png' | relative_url }})
 
 ## Key Learnings
-
 
 ### 1. How Lambertian BRDF Connects with Lighting Models
 

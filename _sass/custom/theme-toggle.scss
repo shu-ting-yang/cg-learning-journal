@@ -31,8 +31,13 @@
   --code-variable:          #204060;  // variables (non-highlighted)        // dark desaturated blue
   --code-operator:          #5e5e5e;  // +, -, =, etc.                      // dark gray
   --code-punctuation:       #444444;  // (), {}, ;                          // steady neutral
-
   --code-weight:             600;       // default font weight for code
+  /* Horizontal rule color */
+  /* This is used for hr elements and section separators */
+  /* If you want to change the color of horizontal rules in light mode */
+  /* you can modify this variable */
+  --hr-color: #edead8;
+  --h2-color: #edead8;
 }
 
 [data-theme="dark"] {
@@ -63,6 +68,12 @@
   --code-operator:          #e5e5e5;  // balanced white
   --code-punctuation:       #bbbbbb;  // slightly dull white
   --code-weight:             500;       // default font weight for code
+  /* Dark mode horizontal rule color */
+  /* This is used for hr elements and section separators */
+  /* If you want to change the color of horizontal rules in dark mode */
+  /* you can modify this variable */
+  --hr-color: #323b34;
+  --h2-color: #595c59;
 }
 
 /* Global Background and Text */
@@ -587,4 +598,59 @@ table {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+
+hr {
+  border: none !important;
+  border-top: 1px solid var(--hr-color) !important; /* Use the same color as h2 border */
+  margin: 1rem 0; /* Optional: controls spacing */
+}
+
+/* H2 heading borders - this is likely what you're seeing */
+h2 {
+  color: var(--text-color) !important;
+  border-bottom: 1px solid var(--hr-color) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* More specific selectors for different page types */
+.page h2,
+.page__content h2,
+.archive h2,
+article h2,
+.single h2,
+main h2,
+.layout--single h2 {
+  border-bottom: 2px solid var(--h2-color) !important;
+  color: var(--text-color) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Also target other heading levels if they have borders */
+h1, h3, h4, h5, h6 {
+  border-bottom: none !important; /* Remove borders from other headings if present */
+}
+
+/* If the theme uses specific classes for bordered headings */
+.page__title,
+.archive__item-title,
+.entry-title {
+  border-bottom: 2px solid var(--h2-color) !important;
+  color: var(--text-color) !important;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

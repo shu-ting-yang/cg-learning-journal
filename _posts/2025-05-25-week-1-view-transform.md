@@ -26,10 +26,12 @@ I created a simple OpenGL app that renders a triangle, and wired up camera contr
 
 ## Recording
 
-<video controls autoplay muted loop style="max-width: 100%;">
-  <source src="{{ '../assets/videos/w1-demo.mp4' | relative_url }}" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<figure class="video-container">
+  <video controls autoplay muted loop style="width: 100%;">
+    <source src="{{ '/assets/videos/w1-demo.mp4' | relative_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 
 ## Key Learnings
