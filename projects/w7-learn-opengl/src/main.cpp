@@ -8,10 +8,15 @@
 using namespace std;
 
 float vertices[] = {
-  // positions          // colors
-  -0.5f, -0.5f, 0.0f,// 1.0f, 0.0f, 0.0f, // bottom left
-   0.5f, -0.5f, 0.0f,// 0.0f, 1.0f, 0.0f, // bottom right
-   0.0f,  0.5f, 0.0f,// 0.0f, 0.0f, 1.0f // top
+  // positions
+    0.5f,  0.5f, 0.0f,  // top right
+     0.5f, -0.5f, 0.0f,  // bottom right
+    -0.5f, -0.5f, 0.0f,  // bottom left
+    -0.5f,  0.5f, 0.0f   // top left 
+};
+unsigned int indices[] = {  // note that we start from 0!
+    0, 1, 3,   // first triangle
+    1, 2, 3    // second triangle
 };
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -66,11 +71,20 @@ int main()
   // VBO and VAO setup
   unsigned int VAO;
   unsigned int VBO;
+  unsigned int EBO; // Element Buffer Object for indexed drawing
   glGenVertexArrays(1, &VAO); // Generate one vertex array object, with the ID stored in VAO
   glGenBuffers(1, &VBO); // Generate one buffer object, with the ID stored in VBO
+  glGenBuffers(1, &EBO); // Generate one element buffer object, with the ID stored in EBO
+
+  // SETUP PHASE - Configure what the VAO should remember
   glBindVertexArray(VAO); // Bind the vertex array object, which will store the vertex attributes
+                          // - "Start recording my vertex setup to the VAO"
   glBindBuffer(GL_ARRAY_BUFFER, VBO); // Any buffer calls will now be used to configure the currently bound buffer object, which is the VBO
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); // Bind the element buffer object, which will store the indices for indexed drawing
+
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // Copy the vertex data to the buffer's memory
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); // Copy the index data to the element buffer's memory
+
   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0); // Specify the layout of the vertex data
   glEnableVertexAttribArray(0); // Enable the vertex attribute array at index 0
 
@@ -119,7 +133,6 @@ int main()
               << infoLog << std::endl; // Print the error log
   }
 
-  glUseProgram(shaderProgram); // Use the shader program for rendering
   // Delete the shader objects after linking them into the program
   glDeleteShader(vertexShader); // Delete the vertex shader object
   glDeleteShader(fragmentShader); // Delete the fragment shader object
@@ -136,8 +149,12 @@ int main()
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // Set the clear color to a dark blue
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with the specified clear color
     glUseProgram(shaderProgram); // Use the shader program for rendering
+    // RENDER PHASE - Activate the VAO's remebered configuration
     glBindVertexArray(VAO); // Bind the vertex array object, which contains the vertex attributes
-    glDrawArrays(GL_TRIANGLES, 0, 3); // Draw the triangle
+                            // - "Use the setup you remembered in the VAO"
+    //glDrawArrays(GL_TRIANGLES, 0, 3); // Use VBO to draw the triangle
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // Use EBO to draw the triangles
+    glBindVertexArray(0);
     // Check for events and call the corresponding callback functions
     glfwPollEvents(); // Poll for and process events(e.g. keyboard input, mouse movement, etc.)
   }
