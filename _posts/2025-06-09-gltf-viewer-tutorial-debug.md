@@ -1,3 +1,16 @@
+---
+layout: single
+title: "Debugging glTF Viewer on macOS (OpenGL 4.1, Apple Silicon)"
+date: 2025-06-09
+categories:
+  - vfx-learning
+tags:
+  - graphics
+  - opengl
+  - gltf
+  - debugging
+  - macos
+---
 ## Debugging glTF Viewer on macOS (OpenGL 4.1, Apple Silicon)
 
 **Date:** 2025-06-09

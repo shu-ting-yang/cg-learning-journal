@@ -1,3 +1,14 @@
+---
+layout: single
+title: "Understanding VAO and VBO: A Beginner's Guide to OpenGL Vertex Management"
+date: 2025-05-31
+categories:
+  - vfx-learning
+tags:
+  - opengl
+  - vao
+  - vbo
+---
 # Understanding VAO and VBO: A Beginner's Guide to OpenGL Vertex Management
 
 When starting with OpenGL, **VAO (Vertex Array Object)** and **VBO (Vertex Buffer Object)** often confuse beginners. Let's clarify what they actually are.

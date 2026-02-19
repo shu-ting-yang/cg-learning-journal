@@ -136,6 +136,10 @@ int main()
   // Delete the shader objects after linking them into the program
   glDeleteShader(vertexShader); // Delete the vertex shader object
   glDeleteShader(fragmentShader); // Delete the fragment shader object
+
+  int nrAttributes;
+  glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes); // Get the maximum number of vertex attributes supported by the OpenGL implementation
+  std::cout << "Maximum number of vertex attributes supported: " << nrAttributes << std::endl; // Print the maximum number
   
   // Main loop
   while (!glfwWindowShouldClose(window))
@@ -149,6 +153,10 @@ int main()
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // Set the clear color to a dark blue
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with the specified clear color
     glUseProgram(shaderProgram); // Use the shader program for rendering
+
+    // Use GL_LINE to render the triangle as a wireframe
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // Set the polygon mode to line rendering (for debugging purposes)
+
     // RENDER PHASE - Activate the VAO's remebered configuration
     glBindVertexArray(VAO); // Bind the vertex array object, which contains the vertex attributes
                             // - "Use the setup you remembered in the VAO"

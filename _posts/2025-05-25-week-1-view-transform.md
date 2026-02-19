@@ -1,3 +1,15 @@
+---
+layout: single
+title: "Week 1: Understanding View Transformations"
+date: 2025-05-25
+categories:
+  - vfx-learning
+tags:
+  - OpenGL
+  - matrix
+  - camera
+  - glm
+---
 # Week 1: Understanding View Transformations
 
 

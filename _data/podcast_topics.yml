@@ -1,0 +1,12 @@
+- id: emotions
+  name: Emotions
+  description: Understanding and managing emotions
+- id: relationships
+  name: Relationships
+  description: Connection, communication, and empathy
+- id: cognition
+  name: Cognition
+  description: How we think and make decisions
+- id: growth
+  name: Personal Growth
+  description: Self-improvement and development

@@ -1,3 +1,14 @@
+---
+layout: single
+title: "CMake + Make Build Flow for OpenGL Projects (Triangle Example)"
+date: 2025-05-26
+categories:
+  - vfx-learning
+tags:
+  - cmake
+  - make
+  - opengl
+---
 # CMake + Make Build Flow for OpenGL Projects (Triangle Example)
 
 This post summarizes the build system flow using **CMake** and **Make** for a simple OpenGL triangle rendering project, using **GLFW**, **GLAD**, and **C++**.

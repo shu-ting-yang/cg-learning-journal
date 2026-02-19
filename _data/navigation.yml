@@ -1,16 +1,14 @@
 # main links
 main:
   - title: "Home"
-    url: https://shu-ting-yang.github.io/cg-learning-journal/
-  - title: "Learning Journal"
-    url: /learning-log/
-  #- title: "Github"
-  #  url: https://github.com/shu-ting-yang/cg-learning-journal
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    url: /
+  - title: "Podcast Notes"
+    url: /podcast-notes/
+  - title: "Creative Works"
+    url: /creative-works/
+  - title: "Reading Notes"
+    url: /reading-notes/
+  - title: "VFX Learning"
+    url: /vfx-learning/
+  - title: "About"
+    url: /about/

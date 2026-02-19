@@ -1,26 +1,25 @@
 ---
 layout: single
-title: "Week 3 Lambertian Model and Lighting"
-date: 2025-06-08
-permalink: /week-3-Lambertian-model/
+title: "Week 4 Asset Loader"
+date: 2025-06-15
+permalink: /week-4-Asset-Loader/
 math: true
 categories:
   - vfx-learning
 tags:
   - graphics
-  - shaders
   - opengl
   - glsl
-  - lambertian
-  - lighting
+  - assimp
+  - glfw
 ---
 * date: 2025-06-08
 * categories: \[graphics, opengl]
-* tags: \[graphics, shaders, opengl, glsl, lambertian, lighting]
+* tags: \[graphics, opengl, glsl, assimp, glfw]
 
-## Goal
+## Go
 
-To visualize the effect of Lambertian model.
+To understand glfw file format.
 
 ## What I Built
 
@@ -56,10 +55,12 @@ Use ESC to leave the program.
 
 
 ### Screenshots
-![Lambertian-1 Output]({{ '/assets/images/blogpost/weekly/w3/lambertian_1.png' | relative_url }})
-![Lambertian-2 Output]({{ '/assets/images/blogpost/weekly/w3/lambertian_2.png' | relative_url }})
+![Lambertian-1 Output](../../assets/images/blogpost/weekly/w3/lambertian_1.png)
+![Lambertian-2 Output](../../assets/images/blogpost/weekly/w3/lambertian_2.png)
+
 
 ## Key Learnings
+
 
 ### 1. How Lambertian BRDF Connects with Lighting Models
 

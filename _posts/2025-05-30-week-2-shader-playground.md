@@ -1,3 +1,17 @@
+---
+layout: single
+title: "Shader Playground: Procedural Grid with Live Controls"
+date: 2025-06-02
+categories:
+  - vfx-learning
+tags:
+  - graphics
+  - shaders
+  - opengl
+  - glsl
+  - procedural
+  - playground
+---
 # Shader Playground: Procedural Grid with Live Controls
 
 * date: 2025-06-02

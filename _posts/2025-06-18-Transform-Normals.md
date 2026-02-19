@@ -1,8 +1,19 @@
 ---
 layout: single
 title: "Transforming Normals with Inverse Transpose"
+date: 2025-06-18
 permalink: /week-3-transform-normals/
 math: true
+categories:
+  - vfx-learning
+tags:
+  - graphics
+  - shaders
+  - opengl
+  - glsl
+  - normal
+  - linear-algebra
+  - lighting
 ---
 * date: 2025-06-18
 * categories: [graphics, opengl]
