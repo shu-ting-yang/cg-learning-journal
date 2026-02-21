@@ -2,37 +2,39 @@
 layout: single
 title: "About"
 permalink: /about/
-author_profile: true
+section_label: "studio profile"
+description: "Why this site exists and how the work is structured."
 ---
 
-<section class="section-hero">
-  <p class="section-kicker">About</p>
-  <h2>Hello, I am Shuting Yang</h2>
-  <p class="section-sub">This site is my personal knowledge and creative practice space, centered on psychology, visual storytelling, and continuous skill growth.</p>
-</section>
+This website is my long-term studio for psychology, visual storytelling, and technical growth.
 
-<div class="content-grid content-grid--2">
-  <article class="content-card">
+## Working principles
+
+- Capture ideas in short, clear notes.
+- Turn passive input into applied decisions.
+- Keep artifacts searchable, reusable, and easy to update.
+
+## Explore the streams
+
+<div class="link-grid">
+  <a class="link-tile" href="{{ '/podcast-notes/' | relative_url }}">
     <h3>Podcast Notes</h3>
-    <p>I summarize psychology podcast episodes into practical takeaways. Customize this section with your listening workflow and note-taking method.</p>
-    <a href="{{ '/podcast-notes/' | relative_url }}">Go to Podcast Notes</a>
-  </article>
-
-  <article class="content-card">
+    <p>Applied takeaways from psychology podcasts.</p>
+  </a>
+  <a class="link-tile" href="{{ '/creative-works/' | relative_url }}">
     <h3>Creative Works</h3>
-    <p>I document video editing, color grading, and photography projects. Customize this section with your style, process, and tools.</p>
-    <a href="{{ '/creative-works/' | relative_url }}">Go to Creative Works</a>
-  </article>
-
-  <article class="content-card">
+    <p>Visual projects with process notes and outcomes.</p>
+  </a>
+  <a class="link-tile" href="{{ '/reading-notes/' | relative_url }}">
     <h3>Reading Notes</h3>
-    <p>I publish notes from psychology books and connect concepts to daily decisions and creative practice. Customize this with your reading lens.</p>
-    <a href="{{ '/reading-notes/' | relative_url }}">Go to Reading Notes</a>
-  </article>
-
-  <article class="content-card">
-    <h3>VFX Learning Archive</h3>
-    <p>This preserves my earlier computer graphics learning journey and technical experiments.</p>
-    <a href="{{ '/vfx-learning/' | relative_url }}">Go to VFX Archive</a>
-  </article>
+    <p>Books translated into concise action models.</p>
+  </a>
+  <a class="link-tile" href="{{ '/vfx-learning/' | relative_url }}">
+    <h3>VFX Archive</h3>
+    <p>A technical timeline of rendering and graphics learning.</p>
+  </a>
 </div>
+
+## Publishing rhythm
+
+I update each stream independently, but the structure is shared across the whole site. This keeps the design consistent and the maintenance cost low as content grows.

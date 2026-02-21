@@ -1,0 +1,80 @@
+{% assign source_key = include.source | default: 'posts' %}
+{% assign category_key = include.category %}
+{% assign variant = include.variant | default: 'default' %}
+{% assign limit_value = include.limit | default: 0 | plus: 0 %}
+
+{% if source_key == 'posts' %}
+  {% assign items = site.posts %}
+  {% if category_key %}
+    {% assign items = items | where_exp: 'item', 'item.categories contains category_key' %}
+  {% endif %}
+{% else %}
+  {% assign items = site[source_key] %}
+{% endif %}
+
+{% assign items = items | where_exp: 'item', 'item.published != false' | sort: 'date' | reverse %}
+{% if limit_value > 0 %}
+  {% assign items = items | slice: 0, limit_value %}
+{% endif %}
+
+<section class="panel" data-reveal>
+  <div class="panel-head">
+    <div>
+      <h2>{{ include.title }}</h2>
+      {% if include.description %}
+        <p>{{ include.description }}</p>
+      {% endif %}
+    </div>
+    {% if include.more_url and include.more_label %}
+      <a class="panel-head__link" href="{{ include.more_url | relative_url }}">{{ include.more_label }}</a>
+    {% endif %}
+  </div>
+
+  {% if items and items.size > 0 %}
+    <div class="entry-grid">
+      {% for item in items %}
+        <article class="entry-card entry-card--{{ variant }}">
+          <p class="entry-card__meta">
+            {% if item.date %}
+              <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%Y-%m-%d" }}</time>
+            {% endif %}
+
+            {% if variant == 'podcast' and item.podcast_show %}
+              <span>{{ item.podcast_show }}</span>
+            {% endif %}
+
+            {% if variant == 'reading' and item.author %}
+              <span>{{ item.author }}</span>
+            {% endif %}
+
+            {% if variant == 'creative' and item.project_type %}
+              <span>{{ item.project_type | capitalize }}</span>
+            {% endif %}
+          </p>
+
+          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+
+          <p>
+            {{ item.excerpt | default: item.description | default: item.content | strip_html | normalize_whitespace | truncate: 170 }}
+          </p>
+
+          {% if variant == 'creative' and item.tools_used and item.tools_used.size > 0 %}
+            <div class="tag-row">
+              {% for tool in item.tools_used limit: 4 %}
+                <span class="tag">{{ tool }}</span>
+              {% endfor %}
+            </div>
+          {% elsif item.tags and item.tags.size > 0 %}
+            <div class="tag-row">
+              {% for tag in item.tags limit: 4 %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="panel-empty">No entries yet.</p>
+  {% endif %}
+</section>

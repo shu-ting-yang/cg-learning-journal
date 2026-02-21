@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="site-chrome">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home">
+      <span class="brand-mark">SY</span>
+      <span class="brand-text">{{ site.masthead_title | default: site.name | default: site.title }}</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      Menu
+    </button>
+
+    <nav id="site-nav" class="site-nav" data-menu>
+      <ul>
+        {% for link in site.data.navigation.main %}
+          {% assign is_active = false %}
+          {% if page.url == link.url %}
+            {% assign is_active = true %}
+          {% endif %}
+          <li>
+            <a href="{{ link.url | relative_url }}"{% if is_active %} class="is-active"{% endif %}>{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

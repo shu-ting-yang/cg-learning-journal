@@ -1,20 +1,77 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
+<section class="hero" data-reveal>
+  <p class="hero-kicker">Minimal. Dark. Intentional.</p>
+  <h1 class="hero-title">A living studio for psychology, visual storytelling, and technical craft.</h1>
+  <p class="hero-copy">This site is organized as a set of clean knowledge streams, each built for long-term maintenance and fast publishing.</p>
+  <div class="hero-actions">
+    <a class="button button--solid" href="{{ '/podcast-notes/' | relative_url }}">Start with Podcast Notes</a>
+    <a class="button button--ghost" href="{{ '/about/' | relative_url }}">About the Practice</a>
+  </div>
+</section>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<section class="stream-grid" data-reveal>
+  <a class="stream-card" href="{{ '/podcast-notes/' | relative_url }}">
+    <p class="stream-card__kicker">Stream 01</p>
+    <h2>Podcast Notes</h2>
+    <p>Short, applied summaries from psychology episodes.</p>
+  </a>
+  <a class="stream-card" href="{{ '/creative-works/' | relative_url }}">
+    <p class="stream-card__kicker">Stream 02</p>
+    <h2>Creative Works</h2>
+    <p>Projects in video, photography, and visual narrative.</p>
+  </a>
+  <a class="stream-card" href="{{ '/reading-notes/' | relative_url }}">
+    <p class="stream-card__kicker">Stream 03</p>
+    <h2>Reading Notes</h2>
+    <p>Book takeaways translated into practical experiments.</p>
+  </a>
+  <a class="stream-card" href="{{ '/vfx-learning/' | relative_url }}">
+    <p class="stream-card__kicker">Stream 04</p>
+    <h2>VFX Archive</h2>
+    <p>An indexed record of graphics and rendering studies.</p>
+  </a>
+</section>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+{% include site/collection-panel.html
+  title="Latest Podcast Notes"
+  description="Recent psychology episodes and distilled takeaways."
+  source="podcast_notes"
+  variant="podcast"
+  limit=3
+  more_url="/podcast-notes/"
+  more_label="View all podcast notes"
+%}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
-</div>
+{% include site/collection-panel.html
+  title="Latest Creative Works"
+  description="Recent visual projects and process snapshots."
+  source="creative_works"
+  variant="creative"
+  limit=3
+  more_url="/creative-works/"
+  more_label="View all creative works"
+%}
 
-{% include paginator.html %}
+{% include site/collection-panel.html
+  title="Latest Reading Notes"
+  description="Recently added books, insights, and reflections."
+  source="reading_notes"
+  variant="reading"
+  limit=3
+  more_url="/reading-notes/"
+  more_label="View all reading notes"
+%}
+
+{% include site/collection-panel.html
+  title="Latest VFX Archive Entries"
+  description="Technical posts from the CG learning timeline."
+  source="posts"
+  category="vfx-learning"
+  variant="post"
+  limit=3
+  more_url="/vfx-learning/"
+  more_label="Open the VFX archive"
+%}

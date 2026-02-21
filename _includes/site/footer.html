@@ -1,0 +1,24 @@
+<footer class="site-footer" data-reveal>
+  <div class="site-footer__grid">
+    <div>
+      <p class="site-footer__title">{{ site.name | default: site.title }}</p>
+      <p class="site-footer__copy">{{ site.description }}</p>
+    </div>
+
+    <div>
+      <p class="site-footer__title">Contact</p>
+      {% if site.author.email %}
+        <a class="site-footer__link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      {% endif %}
+      <div class="site-footer__social">
+        {% for link in site.author.links %}
+          {% if link.url %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <p class="site-footer__meta">© <span data-current-year></span> {{ site.name | default: site.title }}. Built with Jekyll.</p>
+</footer>

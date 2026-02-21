@@ -170,9 +170,6 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
   - Capfile
   - CHANGELOG
   - config
@@ -232,7 +229,8 @@ timezone: Europe/London # https://en.wikipedia.org/wiki/List_of_tz_database_time
 
 
 # Pagination with jekyll-paginate
-paginate: 5 # amount of posts to show
+# Disabled because the homepage is fully custom.
+paginate:
 paginate_path: /page:num/
 
 # Pagination with jekyll-paginate-v2
