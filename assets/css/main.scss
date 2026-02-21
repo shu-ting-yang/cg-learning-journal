@@ -3,8 +3,8 @@
 
 @charset "utf-8";
 
-@use "site/tokens";
-@use "site/base";
-@use "site/layout";
-@use "site/components";
-@use "site/animations";
+@import "site/tokens";
+@import "site/base";
+@import "site/layout";
+@import "site/components";
+@import "site/animations";
