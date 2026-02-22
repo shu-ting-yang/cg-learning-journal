@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="light dark">
     <title>{% if page.title %}{{ page.title | escape }} {{ site.title_separator | default: '-' }} {% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{{ page.excerpt | default: page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+TC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     {% include seo.html %}
     {% include head/custom.html %}
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (_err) {}
+      })();
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   </head>
   <body class="site-body">

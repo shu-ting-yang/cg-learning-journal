@@ -11,14 +11,14 @@
 }
 
 .button--solid {
-  color: #041019;
+  color: var(--button-solid-text);
   background: linear-gradient(130deg, var(--accent-mint), var(--accent-cyan));
   border-color: transparent;
 }
 
 .button--ghost {
   color: var(--text-main);
-  background: rgba(110, 195, 255, 0.1);
+  background: var(--button-ghost-bg);
 }
 
 .button:hover,
@@ -32,7 +32,7 @@
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(12, 18, 26, 0.72);
+  background: var(--panel-bg);
 }
 
 .panel-head {
@@ -80,7 +80,7 @@
   padding: 0.9rem;
   border: 1px solid var(--line);
   border-radius: 0.9rem;
-  background: rgba(16, 24, 34, 0.8);
+  background: var(--card-bg);
 }
 
 .entry-card__meta {
@@ -98,7 +98,7 @@
 .entry-card__meta span,
 .entry-card__meta time {
   padding: 0.1rem 0.35rem;
-  border: 1px solid rgba(244, 202, 116, 0.25);
+  border: 1px solid var(--meta-chip-border);
   border-radius: 999px;
 }
 
@@ -129,7 +129,7 @@
   padding: 1rem 1.1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: linear-gradient(145deg, rgba(18, 26, 37, 0.95), rgba(11, 18, 27, 0.95));
+  background: var(--doc-header-bg);
 }
 
 .doc-kicker {
@@ -172,11 +172,16 @@
   padding: 1.1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(12, 19, 27, 0.74);
+  background: var(--prose-bg);
 }
 
 .prose > :last-child {
   margin-bottom: 0;
+}
+
+.prose p,
+.prose li {
+  margin: 0 0 1em;
 }
 
 .prose h2,
@@ -195,7 +200,7 @@
   border: 1px solid var(--line);
   border-radius: 0.75rem;
   padding: 0.65rem 0.75rem;
-  background: rgba(15, 23, 32, 0.72);
+  background: var(--prose-details-bg);
 }
 
 .prose summary {
@@ -221,7 +226,7 @@
   border-radius: 999px;
   border: 1px solid var(--line-strong);
   color: var(--text-dim);
-  background: rgba(110, 195, 255, 0.08);
+  background: var(--tag-bg);
   font-size: 0.78rem;
 }
 
@@ -230,7 +235,7 @@
   padding: 0.95rem 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(12, 19, 27, 0.7);
+  background: var(--doc-footer-bg);
 }
 
 .doc-footer__label {
@@ -268,7 +273,7 @@
   padding: 0.85rem;
   border-radius: 0.9rem;
   border: 1px solid var(--line);
-  background: rgba(15, 23, 33, 0.75);
+  background: var(--link-tile-bg);
 }
 
 .link-tile h3 {

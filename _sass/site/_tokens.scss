@@ -1,4 +1,69 @@
 :root {
+  color-scheme: light;
+
+  --bg-canvas: #f6f8fc;
+  --bg-glass: rgba(255, 255, 255, 0.86);
+  --bg-glass-strong: #ffffff;
+  --bg-code: #f3f6fb;
+
+  --line: #dbe4f0;
+  --line-strong: #bfd0e3;
+
+  --text-main: #172133;
+  --text-dim: #405068;
+  --text-soft: #667790;
+
+  --accent-mint: #1f9b78;
+  --accent-cyan: #2f74d8;
+  --accent-amber: #b57a1b;
+
+  --shadow-1: 0 22px 50px -34px rgba(20, 36, 64, 0.22);
+
+  --body-radial-mint: rgba(31, 155, 120, 0.12);
+  --body-radial-cyan: rgba(47, 116, 216, 0.12);
+  --body-gradient: linear-gradient(160deg, #f7f9fd 0%, #edf2fa 100%);
+  --grid-line-overlay: rgba(98, 123, 161, 0.09);
+  --grid-mask: radial-gradient(circle at center, black 34%, transparent 90%);
+  --inline-code-bg: #eaf1fb;
+  --inline-code-text: #194a91;
+  --blockquote-bg: rgba(31, 155, 120, 0.08);
+
+  --header-bg: rgba(246, 248, 252, 0.84);
+  --brand-mark-bg: linear-gradient(140deg, rgba(31, 155, 120, 0.12), rgba(47, 116, 216, 0.1));
+  --nav-pill-bg: rgba(47, 116, 216, 0.07);
+  --menu-toggle-bg: rgba(47, 116, 216, 0.08);
+  --hero-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(243, 247, 253, 0.97));
+  --hero-orb: radial-gradient(circle, rgba(47, 116, 216, 0.16) 0%, transparent 72%);
+  --stream-card-bg: rgba(255, 255, 255, 0.78);
+  --footer-bg: rgba(255, 255, 255, 0.84);
+  --mobile-nav-bg: rgba(255, 255, 255, 0.97);
+
+  --button-solid-text: #f7fbff;
+  --button-ghost-bg: rgba(47, 116, 216, 0.08);
+
+  --panel-bg: rgba(255, 255, 255, 0.76);
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --meta-chip-border: rgba(181, 122, 27, 0.22);
+  --doc-header-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(242, 246, 252, 0.95));
+  --prose-bg: rgba(255, 255, 255, 0.78);
+  --prose-details-bg: rgba(248, 251, 255, 0.9);
+  --tag-bg: rgba(47, 116, 216, 0.07);
+  --doc-footer-bg: rgba(255, 255, 255, 0.74);
+  --link-tile-bg: rgba(255, 255, 255, 0.8);
+
+  --radius-sm: 0.65rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.35rem;
+
+  --space-1: 0.5rem;
+  --space-2: 0.8rem;
+  --space-3: 1.2rem;
+  --space-4: 1.6rem;
+  --space-5: 2.4rem;
+  --space-6: 3.4rem;
+}
+
+[data-theme="dark"] {
   color-scheme: dark;
 
   --bg-canvas: #070b10;
@@ -19,14 +84,35 @@
 
   --shadow-1: 0 18px 44px -30px rgba(0, 0, 0, 0.72);
 
-  --radius-sm: 0.65rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.35rem;
+  --body-radial-mint: rgba(110, 243, 197, 0.16);
+  --body-radial-cyan: rgba(110, 195, 255, 0.14);
+  --body-gradient: linear-gradient(160deg, #070b10 0%, #090d14 100%);
+  --grid-line-overlay: rgba(141, 168, 197, 0.06);
+  --grid-mask: radial-gradient(circle at center, black 28%, transparent 86%);
+  --inline-code-bg: rgba(20, 30, 42, 0.95);
+  --inline-code-text: #cae7ff;
+  --blockquote-bg: rgba(110, 243, 197, 0.06);
 
-  --space-1: 0.5rem;
-  --space-2: 0.8rem;
-  --space-3: 1.2rem;
-  --space-4: 1.6rem;
-  --space-5: 2.4rem;
-  --space-6: 3.4rem;
+  --header-bg: rgba(7, 11, 16, 0.85);
+  --brand-mark-bg: linear-gradient(140deg, rgba(110, 243, 197, 0.18), rgba(110, 195, 255, 0.15));
+  --nav-pill-bg: rgba(110, 195, 255, 0.08);
+  --menu-toggle-bg: rgba(110, 195, 255, 0.07);
+  --hero-bg: linear-gradient(145deg, rgba(19, 28, 39, 0.95), rgba(11, 18, 26, 0.96));
+  --hero-orb: radial-gradient(circle, rgba(110, 195, 255, 0.25) 0%, transparent 72%);
+  --stream-card-bg: rgba(14, 20, 29, 0.75);
+  --footer-bg: rgba(12, 19, 27, 0.78);
+  --mobile-nav-bg: rgba(10, 16, 23, 0.98);
+
+  --button-solid-text: #041019;
+  --button-ghost-bg: rgba(110, 195, 255, 0.1);
+
+  --panel-bg: rgba(12, 18, 26, 0.72);
+  --card-bg: rgba(16, 24, 34, 0.8);
+  --meta-chip-border: rgba(244, 202, 116, 0.25);
+  --doc-header-bg: linear-gradient(145deg, rgba(18, 26, 37, 0.95), rgba(11, 18, 27, 0.95));
+  --prose-bg: rgba(12, 19, 27, 0.74);
+  --prose-details-bg: rgba(15, 23, 32, 0.72);
+  --tag-bg: rgba(110, 195, 255, 0.08);
+  --doc-footer-bg: rgba(12, 19, 27, 0.7);
+  --link-tile-bg: rgba(15, 23, 33, 0.75);
 }
